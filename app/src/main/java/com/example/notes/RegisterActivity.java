@@ -33,7 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
     String LOG_TAG = "RegisterActivity";
     private ProgressBar registerProgressBar;
 
-    private ConstraintLayout registerLayoyt;
+    private ConstraintLayout registerLayout;
 
     private final String defaultImageUri = "https://firebasestorage.googleapis.com/v0/b/notes-584c3.appspot.com/o/profileImages%2Fdefaultuser.png?alt=media&token=8228e977-91b2-46a2-8a4a-5df8321f76c8";
 
@@ -49,7 +49,7 @@ public class RegisterActivity extends AppCompatActivity {
         passwordEt = findViewById(R.id.password);
 
         registerProgressBar = findViewById(R.id.registerProgressBar);
-        registerLayoyt = findViewById(R.id.registerLayout);
+        registerLayout = findViewById(R.id.registerLayout);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();
@@ -64,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         } else {
             registerUser(email, password, username);
-            registerLayoyt.setVisibility(View.GONE);
+            registerLayout.setVisibility(View.GONE);
             registerProgressBar.setVisibility(View.VISIBLE);
         }
 
@@ -85,7 +85,7 @@ public class RegisterActivity extends AppCompatActivity {
                             finish();
                             registerProgressBar.setVisibility(View.GONE);
                         } else {
-                            registerLayoyt.setVisibility(View.VISIBLE);
+                            registerLayout.setVisibility(View.VISIBLE);
                             registerProgressBar.setVisibility(View.GONE);
                             Toast.makeText(getApplicationContext(), "Регистрация не удалась, попробуйте еще раз", Toast.LENGTH_LONG).show();
                             Log.i(LOG_TAG, String.valueOf(task.getException()));
