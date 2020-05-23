@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/textColor_botmenu"
+        android:icon="@drawable/ic_format_color_text_black_24dp"
+        android:title="Цвет текста"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/background_botmenu"
+        android:icon="@drawable/ic_format_paint_black_24dp"
+        android:title="Фон"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/image_botmenu"
+        android:icon="@drawable/ic_image_black_24dp"
+        android:title="Картинка"
+        app:showAsAction="always" />
+
+</menu>
