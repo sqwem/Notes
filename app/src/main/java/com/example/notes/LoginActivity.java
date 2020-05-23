@@ -3,7 +3,6 @@ package com.example.notes;
 import android.app.ActivityOptions;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.util.Pair;
 import android.view.View;
 import android.widget.Button;

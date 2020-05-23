@@ -24,7 +24,6 @@ import com.example.notes.NewNoteActivity;
 import com.example.notes.models.Note;
 import com.example.notes.R;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.EventListener;
@@ -33,9 +32,6 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.ListenerRegistration;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class NotesFragment extends Fragment {
@@ -48,7 +44,7 @@ public class NotesFragment extends Fragment {
     private FloatingActionButton floatingActionButton;
     private LinearLayout layoutHint;
 
-    final String LOG_TAG = "NotesLog";
+    private final String LOG_TAG = "NotesLog";
 
     private ListenerRegistration listenerRegistration;
 
